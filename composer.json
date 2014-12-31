@@ -1,0 +1,18 @@
+{
+    "name": "keikogi/status",
+    "description": "Status",
+    "authors": [
+        {
+            "name": "Lev Aminov",
+            "email": "leoderoko@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Keikogi\\Status\\": "src/"
+        }
+    }
+}

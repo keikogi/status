@@ -1,6 +1,8 @@
 Status
 ======
 
+Get system info and list of loaded services.
+
 Requirements
 ------------
 PHP 5.3+

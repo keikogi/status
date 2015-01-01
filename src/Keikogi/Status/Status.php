@@ -11,8 +11,11 @@ class Status
         exec(self::EXEC, $res);
 
         foreach ($res as $resIndex => $resString) {
-            $resString = str_replace(':', '', $resString);
-            preg_match('/[a-zA-Z0-9\-\.\_]+$/i', $resString, $matches);
+            preg_match(
+                '/[a-zA-Z0-9\-\.\_]+$/i',
+                str_replace(':', '', $resString),
+                $matches
+            );
             $res[$resIndex] = $matches[0];
         }
 
@@ -20,6 +23,12 @@ class Status
         $res = array_values(array_unique($res));
         $res = implode(',', $res);
 
-        return trim(exec('uptime')).'::'.phpversion().'::'.$_SERVER["SERVER_SOFTWARE"].'::NaN::'.$res;
+        $serverSoftware = 'Not detected';
+
+        if (isset($_SERVER["SERVER_SOFTWARE"])) {
+            $serverSoftware = $_SERVER["SERVER_SOFTWARE"];
+        }
+
+        return trim(exec('uptime')).'::'.phpversion().'::'.$serverSoftware.'::NaN::'.$res;
     }
 }

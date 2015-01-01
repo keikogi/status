@@ -24,7 +24,7 @@ Add this to a composer.json file:
 
 Usage
 -----
-```
+```php
 require_once __DIR__ . '/vendor/autoload.php';
 
 use Keikogi\Status\Status;

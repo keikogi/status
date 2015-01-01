@@ -21,3 +21,13 @@ Add this to a composer.json file:
     "keikogi/status": ">=1.0.0"
 }
 ```
+
+Usage
+-----
+```
+require_once __DIR__ . '/vendor/autoload.php';
+
+use Keikogi\Status\Status;
+
+echo Status::get();
+```

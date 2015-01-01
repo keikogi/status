@@ -1,5 +1,5 @@
-Status
-======
+Keikogi Status
+==============
 
 Get system info and list of loaded services.
 

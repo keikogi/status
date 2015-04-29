@@ -4,7 +4,7 @@ namespace Keikogi\Status;
 
 class Status
 {
-    const EXEC = "ps -ef | awk '$8==\"/usr/sbin/mysqld\" || $3==1 { print $8 }'";
+    const EXEC = "ps -e | awk '{print $4}' | uniq -u";
 
     public static function get()
     {

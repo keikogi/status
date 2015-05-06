@@ -4,7 +4,7 @@ namespace Keikogi\Status;
 
 class Status
 {
-    const EXEC = "ps -e | awk '{print $4}' | uniq -u";
+    const EXEC = "ps -eo comm= | sort | uniq";
 
     public static function get()
     {
